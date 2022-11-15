@@ -1,0 +1,2 @@
+# Password manager
+This is a password manager that uses tkinter and the cryptography libraries to securely store passwords. Allows you to search and find passwords by website or the username it was stored with.
