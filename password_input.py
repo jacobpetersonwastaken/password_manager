@@ -9,7 +9,7 @@ HEIGHT = 300
 WIDTH = 200
 rand_pass = RandomPassword()
 USER_DATA = "data/login_user_and_pass.csv"
-
+INFO_DATA = "data/info.csv"
 
 def clickExitButton():
     exit()
@@ -59,7 +59,7 @@ class PasswordInput:
         self.change_user_button.grid(row=4, column=3)
         self.check_saved_username()
 
-        self.df2 = pd.read_csv('data/info.csv', index_col=False)
+        self.df2 = pd.read_csv(INFO_DATA, index_col=False)
         self.right_key = (self.df2.iloc[self.df2.loc[self.df2['login'].str.contains('user login')].index[0], 1]).encode()
 
 

@@ -41,7 +41,7 @@ class SignInBox:
 
         login_button = Button(text="Login", width=40, command=self.authenticate)
         login_button.grid(row=3, column=1, padx=10, pady=10)
-        if os.stat('data/info.csv').st_size == 0:
+        if os.stat("data/info.csv").st_size == 0:
             self.new_user = True
         else:
             self.new_user = False
@@ -72,7 +72,7 @@ class SignInBox:
                 login_data = ['user login', key_str, self.new_user]
                 login_label = ['login', 'key', 'new user']
                 df2 = pd.DataFrame(data=[login_data], columns=list(login_label))
-                df2.to_csv('info.csv', index=False)
+                df2.to_csv('data/info.csv', index=False)
 
                 tkinter.messagebox.showinfo(title='Success', message="New user login was successful")
                 self.login_success = True
