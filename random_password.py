@@ -11,6 +11,7 @@ class RandomPassword:
         self.allKeyPossibilities = [self.letters, self.numbers, self.symbols]
 
     def randomizer(self):
+        """Is not used for hashes. Just generates a suggested semi random password that the user could use for a password for a site."""
         your_password_list = []
         your_password = None
         for i in range(0, random.randint(10, 26)):
